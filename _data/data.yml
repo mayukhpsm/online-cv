@@ -44,6 +44,19 @@ sidebar:
 
       - item: Academic Research
         link: https://scholar.google.co.in/citations?user=0fX4LNgAAAAJ&hl=en
+        
+      certifications:
+      - item: Professional Scrum Master I
+        link: https://www.scrum.org/user/286952
+
+      - item: Oracle Certified Specialist
+        link: https://www.youracclaim.com/badges/c9c25e05-0c57-4df4-8921-a3e98d951c42
+
+      - item: Agile using Atlassian Jira
+        link: https://www.coursera.org/account/accomplishments/records/9HS7RT2XU5GK
+      
+      - item: Bloomberg Market Concepts and Portfolio Management
+        link: https://drive.google.com/file/d/1yBA8GNsxVgdwOWfsqOY1rb4x6cuZSw0c/view
 
 career-profile:
     title: Career Profile
