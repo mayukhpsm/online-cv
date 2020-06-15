@@ -78,7 +78,7 @@ experiences:
       time: 2010 - Present
       company: Tata Consultancy Services Ltd.
       details: |
-        • Conducted Webinar based Training Sessions on Map-Reduce Concepts, Sqoop
+        - Conducted Webinar based Training Sessions on Map-Reduce Concepts, Sqoop
           and Oozie best practices to over 50+ TCS employee to achieve 150% increase
           in onboarding of new candidates as Hadoop developer. This won me
           'On-the-Spot' team award.
@@ -86,19 +86,20 @@ experiences:
       time: 2010 - Present
       company: British Telecommunications Plc
       details: |
-        • Productionized complex hadoop-as-a-service data pipeline to integrate with
+        - Productionized complex hadoop-as-a-service data pipeline to integrate with
           reconciliation workflow that mitigates a revenue leakage of upto 250 million
           USD per financial year.
-        • Implemented storage compaction on Hadoop based data pipeline to increase
+        - Implemented storage compaction on Hadoop based data pipeline to increase
           data density by 300%.
     - role: Technical Author and Reviewer (Pro-bono)
       time: 2017 - 2019
       company: Packt Publishing, UK
       details: |
-        • Authored a book on Ethereum Smart Contract Development that generated a
+        - Authored a book on Ethereum Smart Contract Development that generated a
           sale of 1 Million INR in first two quarters post publication. Currently archived
           by Stanford University library and prescribed reference by City University of
-          Hong Kong for CS4389. Technical reviewer of Ethereum Cookbook.
+          Hong Kong for CS4389. 
+        - Technical reviewer of Ethereum Cookbook.
 projects:
     title: Projects
     intro: >
