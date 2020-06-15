@@ -103,29 +103,27 @@ experiences:
 projects:
     title: Projects
     intro: >
-      You can list your side projects or open source libraries in this
-      section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+      Following are my personal data projects.
     assignments:
-      - title: Velocity
-        link: "#hook"
-        tagline: "A responsive website template designed to help startups promote, market and sell their products."
+      - title: Linguistic Analytics
+        link: "https://github.com/mayukhdifferent/Computational_linguistics_using_python"
+        tagline: "Comparing zipf's distribution (word-frequency) using python on a hard literature (Finnegans Wake by James Joyce) against an easy Literature (The Old Man and The Sea by Ernest Hemingway)"
 
-      - title: DevStudio
-        link: "#"
-        tagline: "A responsive website template designed to help web developers/designers market their services."
+      - title: Petya Ransomware Paytrail
+        link: "https://github.com/mayukhdifferent/Petya_Ransomware_paymenttracking_using_R"
+        tagline: "Using the Petya Ransomware bitcoin address, the payment is being visualized in R in BTC and USD on hourly basis"
 
-      - title: Tempo
-        link: "#"
-        tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+      - title: Integrating IBM Watson in R
+        link: "https://www.linkedin.com/pulse/ibm-watson-r-hands-on-guide-mayukh-mukhopadhyay/"
+        tagline: "IBM Watson + R: A Hands-On Guide"
 
-      - title: Atom
-        link: "#"
-        tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
+      - title: Brand Architecture and Marketing Experiment
+        link: "https://github.com/mayukhdifferent/marketing_analytics_uva_darden"
+        tagline: "Peer reviewed reports of Marketing Analytics course conducted by Darden School of Business"
 
-      - title: Delta
-        link: "#"
-        tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
+      - title: MnA India Scrapper using R
+        link: "https://github.com/mayukhdifferent/MnA_IndiaDataScrapping_using_R"
+        tagline: "Scraping data from Competition Commission of India twitter handle and exporting Merger and Acquisition Approval tweets into csv file with timeline details"
 
 publications:
     title: Publications
