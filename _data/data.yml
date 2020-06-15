@@ -132,9 +132,9 @@ publications:
     intro: |
       Following are my publications as professional author and collaborative academic research.
     papers:
-      - title: Ethereum Smart Contract Development
+      - title: "Ethereum Smart Contract Development"
         link: "https://www.oreilly.com/library/view/ethereum-smart-contract/9781788473040/"
-        authors: Mayukh Mukhopahyay
+        authors: Mayukh Mukhopadhyay
         conference: Packt Publishing, UK 2018
 
       - title: "3D Perception of Maximum Density Zone on Ramachandran Plots for Zika Virus Protein Structures"
@@ -142,7 +142,7 @@ publications:
         authors: Mayukh Mukhopadhyay, Parama Bhaumik
         conference: "Int. J. of Adv. Res. 4 (May). 1076-1086"
 
-      - title: An Intuitive Design Approach For Implementing Real Time Audio Effects
+      - title: "An Intuitive Design Approach For Implementing Real Time Audio Effects"
         link: "https://arxiv.org/abs/1311.0842"
         authors: Mayukh Mukhopadhyay, Om Ranjan
         conference: "arXiv:1311.0842"
