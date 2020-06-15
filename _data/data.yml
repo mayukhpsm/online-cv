@@ -9,11 +9,11 @@ sidebar:
     # Profile information
     name: Mayukh Mukhopadhyay
     tagline: Big Data Janitor|Blockchain Author
-    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+    avatar: mmpic.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
     email: mayukh.psm@gmail.com
-    phone: +91 8981792411
+    phone: 
     website: #do not add http://
     linkedin: mayukhpsm
     github: mayukhdifferent
