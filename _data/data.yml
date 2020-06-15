@@ -153,22 +153,22 @@ skills:
     title: Skills &amp; Proficiency
 
     toolset:
-      - name: Python & Django
+      - name: Python & PL/SQL
         level: 98%
 
-      - name: Javascript & jQuery
+      - name: Hive, Oozie & Sqoop
         level: 98%
 
-      - name: Angular
-        level: 98%
+      - name: Shell Scripting
+        level: 90%
 
-      - name: HTML5 & CSS
-        level: 95%
+      - name: Latex & YAML
+        level: 75%
 
-      - name: Ruby on Rails
-        level: 85%
+      - name: Atlassian Jira
+        level: 75%
 
-      - name: Sketch & Photoshop
+      - name: JS, HTML5 & CSS
         level: 60%
 
 footer: >
