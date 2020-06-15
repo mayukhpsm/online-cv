@@ -78,43 +78,31 @@ education:
           - Bullet point
           - Bullet point
 experiences:
-    - role: Lead Developer
-      time: 2015 - Present
-      company: Startup Hubs, San Francisco
+    - role: Assitant Consultant
+      time: 2010 - Present
+      company: Tata Consultancy Services Ltd.
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-        enim. Donec pede justo. Sed ut perspiciatis unde omnis iste natus
-        error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-        architecto beatae vitae dicta sunt explicabo.
-          - Bullet point
-          - Bullet point
-    - role: Senior Software Engineer
-      time: 2014 - 2015
-      company: Google, London
+        • Conducted Webinar based Training Sessions on Map-Reduce Concepts, Sqoop
+          and Oozie best practices to over 50+ TCS employee to achieve 150% increase
+          in onboarding of new candidates as Hadoop developer. This won me
+          'On-the-Spot' team award.
+    - role: Software Developer (Contract)
+      time: 2010 - Present
+      company: British Telecommunications Plc
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
-    - role: UI Developer
-      time: 2012 - 2014
-      company: Amazon, London
+        • Productionized complex hadoop-as-a-service data pipeline to integrate with
+          reconciliation workflow that mitigates a revenue leakage of upto 250 million
+          USD per financial year.
+        • Implemented storage compaction on Hadoop based data pipeline to increase
+          data density by 300%.
+    - role: Technical Author and Reviewer (Pro-bono)
+      time: 2017 - 2019
+      company: Packt Publishing, UK
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
+        • Authored a book on Ethereum Smart Contract Development that generated a
+          sale of 1 Million INR in first two quarters post publication. Currently archived
+          by Stanford University library and prescribed reference by City University of
+          Hong Kong for CS4389. Technical reviewer of Ethereum Cookbook.
 projects:
     title: Projects
     intro: >
