@@ -6,5 +6,5 @@
 $imgKey: random(6);
 $list: blue, turquoise, green, berry, orange, ceramic;
 $nth: nth($list, $imgKey);
-@import "skins/#{$nth}.scss"; // skin
+@import "skins/_{$nth}.scss"; // skin
 //@import "default"; // main partials
