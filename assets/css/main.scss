@@ -3,6 +3,8 @@
 ---
 
 @charset "utf-8";
-
-@import "skins/{{ site.theme_skin | default: 'blue' }}"; // skin
+$imgKey: random(6);
+$list: blue, turquoise, green, berry, orange, ceramic;
+$nth: nth($list, $imgKey);
+@import "skins/{{ #{$nth} | default: 'blue' }}"; // skin
 @import "default"; // main partials
