@@ -107,7 +107,7 @@ career-profile:
       Passionate Software Developer with a [decade](https://drive.google.com/file/d/1s7qFY_50hBp5ghLnwyn94DSLNuI2d6b-/view?usp=sharing "Service & Commitment") of experience in creating complex data pipelines to generate Customer Insights and securing Revenue Assurance. 
       Technical Author and Reviewer with varied professional and academic collaborations. Always striving to strike a balance between narratives and numbers using data storytelling.
 education:
-    - degree: Executive MBA
+    - degree: [Executive MBA](https://drive.google.com/file/d/109D96C-uru0ZBl76EfjkJdlyOUeOtuSz/view?usp=sharing "Term-GPA Transcript")
       university: Indian Institute of Technology, Kharagpur
       time: 2018 - 2021
       details: |
@@ -118,9 +118,20 @@ education:
         pretium quis, sem.
           - Bullet point
           - Bullet point
-    - degree: MEngg Software Engineering
+    - degree: [MEngg Software Engineering](https://drive.google.com/file/d/0B5Q90p4BRILiWVRWOVpCcWYxdlE/view "First-Class")
       university: Jadavpur University
       time: 2013 - 2016
+      details: |
+        Describe your study here lorem ipsum dolor sit amet, consectetuer
+        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+        sociis natoque penatibus et magnis dis parturient montes, nascetur
+        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium quis, sem.
+          - Bullet point
+          - Bullet point
+    - degree: [B.Tech ECE](https://drive.google.com/file/d/1aoiHFBmvti5h9j5kyjD7Wbcso8Je6UFC/view "First-Class")
+      university: West Bengal University of Technology
+      time: 2005 - 2009
       details: |
         Describe your study here lorem ipsum dolor sit amet, consectetuer
         adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
