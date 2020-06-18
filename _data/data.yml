@@ -48,21 +48,21 @@ sidebar:
     certifications:
       - item: Professional Scrum Master I
         link: https://www.scrum.org/user/286952
-
-      - item: Oracle Certified Specialist
-        link: https://www.youracclaim.com/badges/c9c25e05-0c57-4df4-8921-a3e98d951c42
-
-      - item: Agile using Atlassian Jira
-        link: https://www.coursera.org/account/accomplishments/records/9HS7RT2XU5GK
       
-      - item: Market Concepts and Portfolio Management (Bloomberg)
-        link: https://drive.google.com/file/d/1yBA8GNsxVgdwOWfsqOY1rb4x6cuZSw0c/view
+      - item: Digital Product Management (UVA Darden)
+        link: https://www.coursera.org/account/accomplishments/records/NK6C6P6BLBVY
         
       - item: Design Thinking (UVA Darden)
         link: https://www.coursera.org/account/accomplishments/records/VSUR6Y73F76J
       
       - item: Marketing Analytics (UVA Darden)
         link: https://www.coursera.org/account/accomplishments/records/SHQZDC822KZ2
+
+      - item: Agile using Atlassian Jira
+        link: https://www.coursera.org/account/accomplishments/records/9HS7RT2XU5GK
+      
+      - item: Market Concepts and Portfolio Management (Bloomberg)
+        link: https://drive.google.com/file/d/1yBA8GNsxVgdwOWfsqOY1rb4x6cuZSw0c/view
       
       - item: Digital Transformation (BCG)
         link: https://drive.google.com/file/d/11jLz-89_uiN1ByvGZ9uTzMBWlAOR4QoI/view
@@ -78,15 +78,9 @@ sidebar:
         
       - item: Financial Markets (Yale)
         link: https://www.coursera.org/account/accomplishments/records/4JEEGEPJ9HX2  
-      
-      - item: Google Analytics
-        link: https://skillshop.exceedlms.com/student/award/38547538
-      
+            
       - item: Behavioral Finance (Duke)
         link: https://www.coursera.org/account/accomplishments/records/RNVWEQC96K7D
-        
-      - item: Contract Management (World Bank Group)
-        link: https://drive.google.com/file/d/1fjEZlNjWEocQelAkqeRcWP-gbOuwk_ju/view
         
       - item: Financial Development and Financial Inclusion (IMF)
         link: https://drive.google.com/file/d/122RG4zZ5pwzncHEVKCnoH_pQ97I6bakq/view 
@@ -96,12 +90,17 @@ sidebar:
         
       - item: Introduction to Fintech (University of Hong Kong)
         link: https://drive.google.com/file/d/14x3wDPY93a3r_740yz01tQ1spvKaguOO/view
-        
-        
-        
-        
       
-
+      - item: Oracle Certified Specialist
+        link: https://www.youracclaim.com/badges/c9c25e05-0c57-4df4-8921-a3e98d951c42
+        
+      - item: Google Analytics
+        link: https://skillshop.exceedlms.com/student/award/38547538
+        
+      - item: Contract Management (World Bank Group)
+        link: https://drive.google.com/file/d/1fjEZlNjWEocQelAkqeRcWP-gbOuwk_ju/view
+        
+       
 career-profile:
     title: Career Profile
     summary: |
