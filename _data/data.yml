@@ -152,8 +152,9 @@ experiences:
       company: Packt Publishing, UK
       details: |
         - Authored a book on Ethereum Smart Contract Development that generated a
-          sale of 1 Million INR in first two quarters post publication. Currently archived
-          by Stanford University library and prescribed reference by City University of
+          sale of 1 Million INR in first two quarters post publication. 
+        - Featured second on the list of [6 Best Smart Contract Development Books of All Time] (https://bookauthority.org/books/best-smart-contract-development-books "As featured on CNN, Forbes and Inc – BookAuthority.").
+        - Archived by [Stanford University library] (https://searchworks.stanford.edu/view/13217580) and prescribed reference by City University of
           Hong Kong for [CS4389](https://www.cityu.edu.hk/catalogue/ug/201920/course/CS4389.pdf "Decentralized Applications Development"). 
         - Technical reviewer of Ethereum Cookbook.
 projects:
@@ -189,7 +190,7 @@ publications:
       - title: "Ethereum Smart Contract Development"
         link: "https://www.oreilly.com/library/view/ethereum-smart-contract/9781788473040/"
         authors: Mayukh Mukhopadhyay
-        conference: "Packt Publishing, UK, 978-1-78847-304-0 (ISBN)"
+        conference: "Birmingham, UK : Packt Publishing, 2018, ISBN: 978-1-78847-304-0"
 
       - title: "3D Perception of Maximum Density Zone on Ramachandran Plots for Zika Virus Protein Structures"
         link: "https://doi.org/10.1101/053074"
