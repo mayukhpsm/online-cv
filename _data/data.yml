@@ -129,17 +129,7 @@ education:
         pretium quis, sem.
           - Bullet point
           - Bullet point
-    - degree: [B.Tech ECE](https://drive.google.com/file/d/1aoiHFBmvti5h9j5kyjD7Wbcso8Je6UFC/view "First-Class")
-      university: West Bengal University of Technology
-      time: 2005 - 2009
-      details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
+    
 experiences:
     - role: Assistant Consultant
       time: 2010 - Present
