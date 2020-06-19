@@ -10,7 +10,7 @@
     {% for certification in certifications %}
 
       {% if certification.link %}
-      <li><a href="{{ certification.link }}">{{ certification.item }}</a></li>
+      <li><a href="{{ certification.link }}" target="_blank" >{{ certification.item }}</a></li>
       {% else %}
       <li>{{ certification.item }}</li>
       {% endif %}
