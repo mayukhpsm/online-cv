@@ -104,7 +104,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      Passionate Software Developer with a [decade](https://drive.google.com/file/d/1s7qFY_50hBp5ghLnwyn94DSLNuI2d6b-/view?usp=sharing "Service & Commitment") of experience in creating complex data pipelines to generate Customer Insights and securing Revenue Assurance. 
+      Passionate Software Developer with a [decade](https://drive.google.com/file/d/1s7qFY_50hBp5ghLnwyn94DSLNuI2d6b-/view?usp=sharing "Service & Commitment"){:target="_blank"} of experience in creating complex data pipelines to generate Customer Insights and securing Revenue Assurance. 
       Technical Author and Reviewer with varied professional and academic collaborations. Always striving to strike a balance between narratives and numbers using data storytelling.
 education:
     - degree: Executive MBA
