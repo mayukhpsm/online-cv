@@ -131,7 +131,7 @@ education:
         pretium quis, sem.
           - Bullet point
           - Bullet point
-   - degree: B.Tech Electronics and Communication
+   - degree: BTech Electronics and Communication
      link: https://drive.google.com/file/d/1aoiHFBmvti5h9j5kyjD7Wbcso8Je6UFC/view?usp=sharing
      university: West Bengal University of Technology
      time: 2005 - 2009
@@ -238,7 +238,7 @@ skills:
       - name: Hive, Oozie & Sqoop
         level: 98%
 
-      - name: Shell Scripting
+      - name: HTML5 & CSS
         level: 90%
 
       - name: Latex & YAML
@@ -247,7 +247,7 @@ skills:
       - name: Atlassian Jira
         level: 75%
 
-      - name: JS, HTML5 & CSS
+      - name: Shell Scripting 
         level: 60%
 
 footer: >
