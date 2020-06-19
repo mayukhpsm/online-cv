@@ -47,7 +47,7 @@ sidebar:
         
     certifications:
       - item: Professional Scrum Master I
-        link: https://www.scrum.org/user/286952
+        link: https://api.badgr.io/public/assertions/fek0tKXGTk-qlQHgP8vTrA?identity__email=mayukh.mukhopadhyay%40tcs.com
       
       - item: Digital Product Management (UVA Darden)
         link: https://www.coursera.org/account/accomplishments/records/NK6C6P6BLBVY
@@ -123,6 +123,18 @@ education:
       link: https://drive.google.com/file/d/0B5Q90p4BRILiWVRWOVpCcWYxdlE/view
       university: Jadavpur University
       time: 2013 - 2016
+      details: |
+        Describe your study here lorem ipsum dolor sit amet, consectetuer
+        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+        sociis natoque penatibus et magnis dis parturient montes, nascetur
+        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium quis, sem.
+          - Bullet point
+          - Bullet point
+   - degree: B.Tech Electronics and Communication
+      link: https://drive.google.com/file/d/1aoiHFBmvti5h9j5kyjD7Wbcso8Je6UFC/view?usp=sharing
+      university: West Bengal University of Technology
+      time: 2005 - 2009
       details: |
         Describe your study here lorem ipsum dolor sit amet, consectetuer
         adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
