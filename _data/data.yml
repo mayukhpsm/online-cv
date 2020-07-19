@@ -105,7 +105,7 @@ career-profile:
     title: Career Profile
     summary: |
       Passionate Software Developer with a [decade](https://drive.google.com/file/d/1s7qFY_50hBp5ghLnwyn94DSLNuI2d6b-/view?usp=sharing "Service & Commitment"){:target="_blank"} of experience in creating complex data pipelines to generate Customer Insights and securing Revenue Assurance in [Agile](https://drive.google.com/file/d/1QMhk2i1REY4r5JREaXoVxWtVXuE4oyra/view){:target="_blank"} projects. 
-      Technical Author and Reviewer with varied professional and academic collaborations. Always striving to strike a balance between narratives and numbers using data storytelling.
+      [Technical Author](https://www.packtpub.com/authors/mayukh-mukhopadhyay){:target="_blank"} and Reviewer with varied professional and academic collaborations. Always striving to strike a balance between narratives and numbers using data storytelling.
 education:
     - degree: Executive MBA
       link: https://drive.google.com/file/d/109D96C-uru0ZBl76EfjkJdlyOUeOtuSz/view?usp=sharing
@@ -150,7 +150,7 @@ experiences:
           USD per financial year.
         - Implemented storage compaction on Hadoop based data pipeline to increase
           data density by 300%.
-    - role: [Technical Author and Reviewer](https://www.packtpub.com/authors/mayukh-mukhopadhyay){:target="_blank"} (Contract)
+    - role: Technical Author and Reviewer (Contract)
       time: 2017 - 2019
       company: Packt Publishing, UK
       details: |
