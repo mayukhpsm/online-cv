@@ -4,7 +4,7 @@
 
 sidebar:
     about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
-    education: True # set to False if you want education in main section instead of in sidebar
+    education: False # set to False if you want education in main section instead of in sidebar
 
     # Profile information
     name: Mayukh Mukhopadhyay
@@ -112,25 +112,17 @@ education:
       university: Indian Institute of Technology, Kharagpur
       time: 2018 - 2021
       details: |
-       Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
+       This program taught me how to put the narrative to numbers, the story behind a data and how to articulate the insights.
+          - Lead a team of three into Finals of National Level Valuation Competition
+          - Founder of the Digital Interaction Platform for VGSOM Executive MBA
     - degree: MEngg Software Engineering
       link: https://drive.google.com/file/d/0B5Q90p4BRILiWVRWOVpCcWYxdlE/view
       university: Jadavpur University
       time: 2013 - 2016
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
+        This program taught me about coding, networking and algorithms.
+          - Secured Scholarship from TCS to fund my entire coursework
+          - Got published by Lambert Publishing Germany based on my final year thesis work.
   
 experiences:
     - role: Assistant Consultant
