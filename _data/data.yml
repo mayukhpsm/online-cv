@@ -115,7 +115,7 @@ education:
       time: 2022 - Pursuing
       details: |
        This program taught me how to covert real-life observations into peer-reviewed marketing literature.
-          - Best Paper Award (Top 3) at International Conference [CERE 2023] (https://www.iimidr.ac.in/news-events/cere-2023-held-at-iim-indore/){:target="_blank"} among 200+ participants.
+          - Best Paper Award (Top 3) at International Conference [CERE 2023](https://www.iimidr.ac.in/news-events/cere-2023-held-at-iim-indore/){:target="_blank"} among 200+ participants.
     - degree: Master of Business Administration
       link: 
       university: Indian Institute of Technology Kharagpur
@@ -140,8 +140,7 @@ experiences:
       details: |
         - Conducted Webinar based Training Sessions on Map-Reduce Concepts, Sqoop
           and Oozie best practices to over 50+ TCS employee to achieve 150% increase
-          in onboarding of new candidates as Hadoop developer. This won me
-          ['On-the-Spot'](https://drive.google.com/file/d/15k2B-lzEwU72Jv3fluxdU2iqWFg71FUv/view?usp=sharing "July-2018"){:target="_blank"} Team award.
+          in onboarding of new candidates as Hadoop developer. This won me 'On-the-Spot' Team award.
     - role: Software Developer (Contract)
       time: 2010 - Present
       company: British Telecommunications Plc
