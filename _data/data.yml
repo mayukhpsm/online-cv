@@ -8,13 +8,13 @@ sidebar:
 
     # Profile information
     name: Mayukh Mukhopadhyay
-    tagline: Software Developer and Technical Author
+    tagline: Solution Architect and Technical Author
     avatar: mmpic.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: mayukh.psm@gmail.com
+    email: mayukhdifferent (at) gmail (dot) com
     phone: 
-    website: #do not add http://
+    website: mayukhmukhopadhyay.com #do not add http://
     linkedin: mayukhpsm
     github: mayukhdifferent
     telegram: # add your nickname without '@' sign
@@ -47,7 +47,7 @@ sidebar:
         
     certifications:
       - item: Professional Scrum Master I
-        link: https://api.badgr.io/public/assertions/fek0tKXGTk-qlQHgP8vTrA?identity__email=mayukh.mukhopadhyay%40tcs.com
+        link: https://www.credly.com/badges/d3de1a7e-23e4-4e18-ac03-1349b6a9bc88
       
       - item: Digital Product Management (UVA Darden)
         link: https://www.coursera.org/account/accomplishments/records/NK6C6P6BLBVY
@@ -58,14 +58,14 @@ sidebar:
       - item: Marketing Analytics (UVA Darden)
         link: https://www.coursera.org/account/accomplishments/records/SHQZDC822KZ2
 
-      - item: Agile using Atlassian Jira
-        link: https://www.coursera.org/account/accomplishments/records/9HS7RT2XU5GK
+      - item: Microsoft Certified Azure Fundamentals
+        link: https://www.credly.com/badges/8fe45d76-1b01-43f3-ae3b-8a54f4f6b677
       
-      - item: Market Concepts and Portfolio Management (Bloomberg)
-        link: https://drive.google.com/file/d/1yBA8GNsxVgdwOWfsqOY1rb4x6cuZSw0c/view
+      - item: Generative AI for Managers (PMI)
+        link: https://www.credly.com/badges/6871c85b-6d9e-4e42-a87a-4730755f7c0b
       
-      - item: Digital Transformation (BCG)
-        link: https://drive.google.com/file/d/11jLz-89_uiN1ByvGZ9uTzMBWlAOR4QoI/view
+      - item: Microsoft Certified Azure AI Fundamentals
+        link: https://www.credly.com/badges/d145cb1e-5f91-4c37-9d19-dc0aefa2e70b
       
       - item: Blockchain Transformations of Financial Services (INSEAD)
         link: https://www.coursera.org/account/accomplishments/records/WWTQN56UPRWQ
@@ -73,8 +73,8 @@ sidebar:
       - item: Deep Learning Specialization (deeplearning.ai)
         link: https://www.coursera.org/account/accomplishments/specialization/V3KUSTYVG7HY
       
-      - item: Tensorflow Developer Professional Certification (deeplearning.ai)
-        link: https://www.coursera.org/account/accomplishments/professional-cert/56VUT984P8DU 
+      - item: Microsoft Certified Azure Data Fundamentals
+        link: https://www.credly.com/badges/67ad028e-bc5c-4fb0-980a-3624afc80935 
       
       - item: Machine Learning (Stanford)
         link: https://www.coursera.org/account/accomplishments/records/94SHNT7UHQZE
@@ -85,38 +85,47 @@ sidebar:
       - item: Behavioral Finance (Duke)
         link: https://www.coursera.org/account/accomplishments/records/RNVWEQC96K7D
         
-      - item: Financial Development and Financial Inclusion (IMF)
-        link: https://drive.google.com/file/d/122RG4zZ5pwzncHEVKCnoH_pQ97I6bakq/view 
+      - item: IBM Quantum Consultations
+        link: https://www.credly.com/badges/af614aa2-7411-4481-92f1-8296bcd5c2e8 
         
       - item: Private Equity and Venture Capital (Bocconi)
         link: https://www.coursera.org/account/accomplishments/records/LWJ28XZ5532A
         
-      - item: Introduction to Fintech (University of Hong Kong)
-        link: https://drive.google.com/file/d/14x3wDPY93a3r_740yz01tQ1spvKaguOO/view
+      - item: Enterprise Design Thinking Practitioner
+        link: https://www.credly.com/badges/3fcb2f37-72df-4996-97b7-21a7d081a7d1
       
-      - item: Oracle Cloud Certified Specialist and Professional
-        link: https://www.youracclaim.com/users/mayukh-mukhopadhyay/badges
+      - item: Oracle Certified Specialist (OBIEE 11g)
+        link: https://www.credly.com/badges/c9c25e05-0c57-4df4-8921-a3e98d951c42
         
-      - item: Google Analytics
-        link: https://skillshop.exceedlms.com/student/award/38547538
+      - item: Azure Certified Solution Architect
+        link: https://www.credly.com/badges/71af50b1-ccf9-4109-ba04-d85286f08a1d
         
-      - item: Contract Management (World Bank Group)
-        link: https://drive.google.com/file/d/1fjEZlNjWEocQelAkqeRcWP-gbOuwk_ju/view
+      - item: Azure AI Engineer Associate
+        link: https://www.credly.com/badges/c523deab-2ce2-4240-9d05-7d374b5580fe
         
        
 career-profile:
     title: Career Profile
     summary: |
-      Passionate Software Developer with a [decade](https://drive.google.com/file/d/1s7qFY_50hBp5ghLnwyn94DSLNuI2d6b-/view?usp=sharing "Service & Commitment"){:target="_blank"} of experience in creating complex data pipelines to generate Customer Insights and securing Revenue Assurance in [Agile](https://drive.google.com/file/d/1QMhk2i1REY4r5JREaXoVxWtVXuE4oyra/view){:target="_blank"} projects. 
-      [Technical Author](https://www.packtpub.com/authors/mayukh-mukhopadhyay){:target="_blank"} and Reviewer with varied professional and academic collaborations. Always striving to strike a balance between narratives and numbers using data storytelling. ACM Professional Member Since 2020.
+      Mayukh Mukhopadhyay is a data consultant at Tata Consultancy Services. He has more than a decade of experience in designing complex data pipeline to generate customer insights and securing revenue assurance in agile telecom projects. He has been awarded TCS Contextual Master Badge, given to less than 5% TCS Employee, for designing seamless business continuity solutions in midst of major cloud transformation program.
+      He has authored the book Ethereum Smart Contract Development that has been catalogued by all the 8 Ivey League Libraries, MIT Library, Stanford University Library, Michigan Ross Library, IIM Bangalore Library, Toronto Public Library, National Library Board Singapore and is a prescribed reference at City University of Hong Kong for CS4389 and University of Mumbai. He has also served as the technical reviewer of Ethereum Cookbook. 
+      He has a master’s in software engineering from Jadavpur University and MBA from VGSOM IIT Kharagpur. He is currently pursuing PhD (Industry Track) from IIM Indore, an AACSB-AMBA-EQUIS accrediated public business school. 
+      He is an active Professional Member of Association for Computing Machinery (ACM) and peer-reviews various business analytics and blockchain research papers for Scopus-indexed journals and IEEE conferences. He is a Professional Scrum Master. He is empaneled in Independent Director Databank issued by Ministry of Corporate Affairs, Government of India.
 education:
-    - degree: Executive MBA
+    - degree: PhD (Marketing)
       link: https://drive.google.com/file/d/109D96C-uru0ZBl76EfjkJdlyOUeOtuSz/view?usp=sharing
-      university: Indian Institute of Technology, Kharagpur
+      university: Indian Institute of Management Indore
+      time: 2022 - Pursuing
+      details: |
+       This program taught me how to put the narrative to numbers, the story behind a data and how to articulate the insights.
+          - Finalist in National Level Valuation Competition Mulyakan 2019
+    - degree: Master of Business Administration
+      link: https://drive.google.com/file/d/109D96C-uru0ZBl76EfjkJdlyOUeOtuSz/view?usp=sharing
+      university: Indian Institute of Technology Kharagpur
       time: 2018 - 2021
       details: |
        This program taught me how to put the narrative to numbers, the story behind a data and how to articulate the insights.
-          - Finalist in National Level Valuation Competition [Mulyakan 2019](https://drive.google.com/file/d/0B5Q90p4BRILianU3MkNYdllvV2pYdmlXRlV5SmFqSU1SR3Br/view){:target="_blank"}
+          - Finalist in National Level Valuation Competition Mulyakan 2019
           - Authored book on emerging case studies [FSEBCbook](https://fsebcbook.github.io/){:target="_blank"} for Eliva Press, Moldova, EU.
     - degree: MEngg Software Engineering
       link: https://drive.google.com/file/d/0B5Q90p4BRILiWVRWOVpCcWYxdlE/view
