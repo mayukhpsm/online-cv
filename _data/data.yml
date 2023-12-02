@@ -110,14 +110,14 @@ career-profile:
       Mayukh Mukhopadhyay is a full-time technology consultant with more than a decade of experience in designing business continuity solutions in the midst of complex digital transformation programs. He did his M.Engg from Jadavpur University and MBA from IIT Kharagpur. He is currently pursuing PhD (Industry Track) from IIM Indore. He has authored the book Ethereum Smart Contract Development, Packt UK. He is an active Professional Member of ACM, Professional Scrum Master I, and Azure Certified Solution Architect.
 education:
     - degree: PhD (Marketing)
-      link: 
+      link: https://www.iimidr.ac.in/
       university: Indian Institute of Management Indore
       time: 2022 - Pursuing
       details: |
        This program taught me how to covert real-life observations into peer-reviewed marketing literature.
           - Best Paper Award (Top 3) at International Conference [CERE 2023](https://www.iimidr.ac.in/news-events/cere-2023-held-at-iim-indore/){:target="_blank"} among 200+ participants.
     - degree: Master of Business Administration
-      link: 
+      link: https://som.iitkgp.ac.in/
       university: Indian Institute of Technology Kharagpur
       time: 2018 - 2021
       details: |
@@ -125,7 +125,7 @@ education:
           - Finalist in National Level Valuation Competition Mulyakan 2019
           - Authored book on emerging case studies [FSEBCbook](https://fsebcbook.github.io/){:target="_blank"} for Eliva Press, Moldova, EU.
     - degree: MEngg Software Engineering
-      link: 
+      link: http://www.jaduniv.edu.in/
       university: Jadavpur University
       time: 2013 - 2016
       details: |
