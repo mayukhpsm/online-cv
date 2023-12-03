@@ -131,7 +131,7 @@ education:
       details: |
         This program taught me about coding, networking and algorithms.
           - Secured Scholarship from TCS to fund my entire coursework
-          - Got published by [Lambert Publishing Germany](https://www.amazon.in/Perception-Maximum-Density-plots-virus/dp/3330349123){:target="_blank"} based on my final year thesis work.
+          - My final year thesis work got published by Lambert Publishing Germany and is made available at [Harvard Book Store](https://shop.harvard.com/book/9783330349124){:target="_blank"}.
   
 experiences:
     - role: Assistant Consultant
@@ -141,7 +141,7 @@ experiences:
         - Conducted Webinar based Training Sessions on Map-Reduce Concepts, Sqoop
           and Oozie best practices to over 50+ TCS employee to achieve 150% increase
           in onboarding of new candidates as Hadoop developer. This won me 'On-the-Spot' Team award.
-    - role: Software Developer (Contract)
+    - role: Solution Designer (Contract)
       time: 2010 - Present
       company: British Telecommunications Plc
       details: |
