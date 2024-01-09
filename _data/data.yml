@@ -48,36 +48,27 @@ sidebar:
     certifications:
       - item: Professional Scrum Master I
         link: https://www.credly.com/badges/d3de1a7e-23e4-4e18-ac03-1349b6a9bc88
-      
-      - item: Digital Product Management (UVA Darden)
-        link: https://www.coursera.org/account/accomplishments/records/NK6C6P6BLBVY
         
-      - item: Design Thinking (UVA Darden)
-        link: https://www.coursera.org/account/accomplishments/records/VSUR6Y73F76J
-      
-      - item: Marketing Analytics (UVA Darden)
-        link: https://www.coursera.org/account/accomplishments/records/SHQZDC822KZ2
+      - item: Azure Certified Solution Architect
+        link: https://www.credly.com/badges/71af50b1-ccf9-4109-ba04-d85286f08a1d
+        
+      - item: Azure AI Engineer Associate
+        link: https://www.credly.com/badges/c523deab-2ce2-4240-9d05-7d374b5580fe
 
       - item: Microsoft Certified Azure Fundamentals
         link: https://www.credly.com/badges/8fe45d76-1b01-43f3-ae3b-8a54f4f6b677
       
-      - item: Generative AI for Managers (PMI)
-        link: https://www.credly.com/badges/6871c85b-6d9e-4e42-a87a-4730755f7c0b
-      
       - item: Microsoft Certified Azure AI Fundamentals
         link: https://www.credly.com/badges/d145cb1e-5f91-4c37-9d19-dc0aefa2e70b
-      
-      - item: Blockchain Transformations of Financial Services (INSEAD)
-        link: https://www.coursera.org/account/accomplishments/records/WWTQN56UPRWQ
-        
-      - item: Deep Learning Specialization (deeplearning.ai)
-        link: https://www.coursera.org/account/accomplishments/specialization/V3KUSTYVG7HY
       
       - item: Microsoft Certified Azure Data Fundamentals
         link: https://www.credly.com/badges/67ad028e-bc5c-4fb0-980a-3624afc80935 
       
       - item: Machine Learning (Stanford)
         link: https://www.coursera.org/account/accomplishments/records/94SHNT7UHQZE
+        
+      - item: Generative AI for Managers (PMI)
+        link: https://www.credly.com/badges/6871c85b-6d9e-4e42-a87a-4730755f7c0b
         
       - item: Financial Markets (Yale)
         link: https://www.coursera.org/account/accomplishments/records/4JEEGEPJ9HX2  
@@ -97,12 +88,23 @@ sidebar:
       - item: Oracle Certified Specialist (OBIEE 11g)
         link: https://www.credly.com/badges/c9c25e05-0c57-4df4-8921-a3e98d951c42
         
-      - item: Azure Certified Solution Architect
-        link: https://www.credly.com/badges/71af50b1-ccf9-4109-ba04-d85286f08a1d
+      - item: Digital Product Management (UVA Darden)
+        link: https://www.coursera.org/account/accomplishments/records/NK6C6P6BLBVY
         
-      - item: Azure AI Engineer Associate
-        link: https://www.credly.com/badges/c523deab-2ce2-4240-9d05-7d374b5580fe
+      - item: Design Thinking (UVA Darden)
+        link: https://www.coursera.org/account/accomplishments/records/VSUR6Y73F76J
+      
+      - item: Marketing Analytics (UVA Darden)
+        link: https://www.coursera.org/account/accomplishments/records/SHQZDC822KZ2  
+
+      - item: Blockchain Transformations of Financial Services (INSEAD)
+        link: https://www.coursera.org/account/accomplishments/records/WWTQN56UPRWQ
         
+      - item: Deep Learning Specialization (deeplearning.ai)
+        link: https://www.coursera.org/account/accomplishments/specialization/V3KUSTYVG7HY
+        
+      - item: Google Cloud Professional Data Engineer (Not-Renewed after 2022)
+        link: https://www.credential.net/bd464777-3f09-4c77-97fb-60b4a8a33c7c
        
 career-profile:
     title: Career Profile
