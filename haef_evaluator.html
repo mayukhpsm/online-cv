@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HAEF Evaluator</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#0d0f1a;color:#e2e8f0;font-family:'Segoe UI',sans-serif;min-height:100vh;}
+header{background:#141726;border-bottom:1px solid #2a3050;padding:24px 32px;text-align:center;}
+header h1{font-size:1.8rem;font-weight:800;color:#5b8cff;}
+header p{color:#7c8db5;font-size:0.92rem;margin-top:6px;}
+.wrap{max-width:1100px;margin:0 auto;padding:30px 20px 60px;}
+.card{background:#1a1f35;border:1px solid #2a3050;border-radius:12px;padding:24px;margin-bottom:24px;}
+label{display:block;font-size:0.8rem;font-weight:700;color:#7c8db5;text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+input[type=text]{flex:1;min-width:240px;background:#0d0f1a;border:1.5px solid #2a3050;border-radius:8px;color:#e2e8f0;font-size:1.05rem;padding:12px 16px;outline:none;}
+input[type=text]:focus{border-color:#5b8cff;}
+button#evalBtn{background:#5b8cff;color:#fff;font-size:1rem;font-weight:700;border:none;border-radius:8px;padding:12px 28px;cursor:pointer;}
+button#evalBtn:hover{background:#4a7aee;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.chip{background:#0d0f1a;border:1px solid #2a3050;border-radius:999px;padding:5px 14px;font-size:0.8rem;color:#7c8db5;cursor:pointer;display:inline-block;}
+.chip:hover{border-color:#5b8cff;color:#5b8cff;}
+#banner{display:none;text-align:center;padding:28px;}
+.ptitle{font-size:1.5rem;font-weight:700;margin-bottom:8px;}
+.bscore{font-size:4.5rem;font-weight:800;line-height:1;}
+.bsub{color:#7c8db5;font-size:1rem;margin-top:4px;}
+.pill{display:inline-block;margin-top:12px;padding:5px 22px;border-radius:999px;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;}
+.p-high{background:rgba(52,211,153,.15);color:#34d399;border:1px solid #34d399;}
+.p-mod{background:rgba(251,191,36,.15);color:#fbbf24;border:1px solid #fbbf24;}
+.p-low{background:rgba(248,113,113,.15);color:#f87171;border:1px solid #f87171;}
+.grid{display:none;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:750px){.grid{grid-template-columns:1fr;}}
+.gcell{background:#1a1f35;border:1px solid #2a3050;border-radius:12px;padding:22px;}
+.gcell h3{font-size:0.78rem;font-weight:700;color:#7c8db5;text-transform:uppercase;letter-spacing:.07em;margin-bottom:16px;}
+.gcell-full{grid-column:1/-1;}
+svg#radar{width:100%;max-width:360px;display:block;margin:0 auto;}
+.drow{margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid #2a3050;}
+.drow:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.dhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;}
+.dname{font-weight:700;font-size:0.9rem;}
+.dchip{font-size:0.82rem;font-weight:700;padding:2px 11px;border-radius:999px;background:rgba(91,140,255,.12);color:#5b8cff;border:1px solid rgba(91,140,255,.25);}
+.barwrap{background:#0d0f1a;border-radius:4px;height:6px;overflow:hidden;margin-bottom:9px;}
+.barfill{height:100%;border-radius:4px;}
+.subs{display:flex;flex-direction:column;gap:6px;}
+.subrow{display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;}
+.subname{color:#7c8db5;}
+.dots{display:flex;gap:3px;}
+.dot{width:9px;height:9px;border-radius:50%;}
+#rationale{font-size:0.93rem;line-height:1.78;color:#c8d0e7;}
+#rationale p{margin-bottom:9px;}
+
+.warn-box{display:none;background:rgba(251,191,36,0.08);border:1px solid #fbbf24;border-radius:8px;padding:12px 16px;margin-top:14px;font-size:0.87rem;color:#fbbf24;line-height:1.6;}
+.warn-box strong{font-weight:700;}
+
+footer{text-align:center;color:#7c8db5;font-size:0.8rem;padding:16px;border-top:1px solid #2a3050;}
+</style>
+</head>
+<body>
+<header>
+  <h1>HAEF &mdash; Hofstadter Analogy Evaluation Framework</h1>
+  <p>Score any analogy or catchphrase across 5 dimensions &bull; Runs 100% offline &bull; No installation needed</p>
+</header>
+
+<div class="wrap">
+
+  <!-- INPUT -->
+  <div class="card">
+    <label>Enter a catchphrase or analogy</label>
+    <div class="row">
+      <input type="text" id="inp" placeholder='Try: "Data is the new oil"' />
+      <button id="evalBtn" onclick="runEval()">Evaluate &rarr;</button>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+
+  <!-- BANNER -->
+  <div class="card" id="banner">
+    <div class="ptitle" id="ptitle"></div>
+    <div class="bscore" id="bscore"></div>
+    <div class="bsub">out of 75</div>
+    <div class="pill" id="pill"></div>
+    <div class="warn-box" id="warnBox"><strong>&#9888; Baseline Score Warning:</strong> No meaningful semantic content was detected in this phrase. The score of <span id="warnScore"></span>/75 reflects a <em>neutral heuristic baseline</em>, not a genuine structural evaluation. This phrase appears to be a meaningless placeholder (e.g. &ldquo;X is the new Y&rdquo;) with no identifiable domain, relational structure, or cognitive content. Treat this score as <strong>invalid</strong> for any analytical purpose.</div>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid" id="grid">
+    <div class="gcell">
+      <h3>Cobweb Radar &mdash; Scores per Dimension (/15)</h3>
+      <svg id="radar" viewBox="0 0 360 340" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    <div class="gcell">
+      <h3>Dimension Breakdown</h3>
+      <div id="dims"></div>
+    </div>
+    <div class="gcell gcell-full">
+      <h3>Analytical Rationale</h3>
+      <div id="rationale"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>HAEF Mayukh Mukhopadhyay &copy; 2026 &mdash; Hofstadter (2001) &bull; Gentner &amp; Markman (1997) &bull; Lakoff (1980) &bull;  Supplement for Paper Presented at ICM 2.0, Track 1B, hosted by IIM Bodhgaya</footer>
+
+<script>
+
+// ── DATA ──────────────────────────────────────────────────────────────────────
+
+var DIMS = [
+  {name:"Structural Mapping",         color:"#5b8cff", subs:["Relational isomorphism","Deep structure preserv.","Ontological alignment"]},
+  {name:"Functional Alignment",       color:"#a78bfa", subs:["Process accuracy","Purpose correspondence","Causal fidelity"]},
+  {name:"Cognitive Utility",          color:"#34d399", subs:["Memorability & clarity","Insight generation","Semantic precision"]},
+  {name:"Contextual Sensitivity",     color:"#fbbf24", subs:["Cross-scale robustness","Temporal stability","Disciplinary breadth"]},
+  {name:"Ethical & Interpretive Risk",color:"#f87171", subs:["Bias/distortion (inv.)","Surveillance norm. (inv.)","Monopoly framing (inv.)"]},
+];
+
+var EXAMPLES = [
+  "Data is the new oil",
+  "DNA is like a code",
+  "Markets are ecosystems",
+  "AI is the new electricity",
+  "The brain is a computer",
+  "Software is construction",
+  "Data is soil",
+  "Time is money",
+  "Algorithms are judges",
+  "AI is the new fire",
+];
+
+var REF = {
+  "data is the new oil":            [1, 1, 4, 1, 2],
+  "dna is like a code":             [14,13,13,11,11],
+  "markets are ecosystems":         [12,13,12,11,10],
+  "ai is the new electricity":      [11,12,13,11, 9],
+  "ai is the new fire":             [11,11,13,11, 8],
+  "the brain is a computer":        [ 8, 9,12, 8, 5],
+  "software is construction":       [ 6, 7,10, 6, 3],
+  "time is money":                  [ 7, 9,14,10,12],
+  "love is a journey":              [ 8, 8,14,12,13],
+  "the internet is a highway":      [ 9,10,13, 9,12],
+  "ai is the new oil":              [ 3, 2, 7, 4, 3],
+  "data is soil":                   [ 9,10,12,10,13],
+  "data is light":                  [ 8, 9,13,10,13],
+  "algorithms are judges":          [ 7, 8,11, 7, 4],
+  "blockchain is the new internet": [ 8, 9,11, 8, 9],
+  "platform is an ecosystem":       [10,11,12,10,11],
+  "disruption is a tsunami":        [ 7, 7,11, 7,10],
+};
+
+// ── SCORING ───────────────────────────────────────────────────────────────────
+
+function normalize(s) {
+  return s.toLowerCase().trim().replace(/["""'.!?]/g, "");
+}
+
+function heuristic(phrase) {
+  var p = phrase.toLowerCase();
+  function has(re) { return re.test(p); }
+  var s = [8, 8, 10, 8, 10];
+  if (has(/\b(dna|gene|quantum|neuron|algorithm|fractal)\b/))   { s[0]+=4; s[1]+=3; s[2]+=1; s[3]+=2; }
+  if (has(/\b(ecosystem|soil|forest|organism|garden|seed)\b/))  { s[0]+=3; s[1]+=2; s[3]+=3; s[4]+=2; }
+  if (has(/\b(highway|road|bridge|pipeline|grid|rail)\b/))      { s[0]+=1; s[1]+=2; s[3]+=1; }
+  if (has(/\b(fire|water|light|wind|wave|storm|earth)\b/))      { s[2]+=2; s[3]+=2; }
+  if (has(/\b(time|love|life|journey|dream|mind)\b/))           { s[2]+=2; s[4]+=1; }
+  if (has(/\bthe new\b/))                                        { s[2]+=2; s[3]-=1; }
+  if (has(/\b(oil|mine|extract|drill)\b/) && has(/\b(data|ai|cloud|digital)\b/)) { s[0]-=5; s[1]-=5; s[2]-=3; s[3]-=3; s[4]-=5; }
+  if (has(/\b(surveillance|spy|harvest|track|monitor)\b/))      { s[4]-=4; }
+  if (has(/\b(monopoly|dominate|scarce|control)\b/))            { s[4]-=3; }
+  if (has(/\b(infinite|regenerat|renew|abundant)\b/))           { s[0]+=2; s[4]+=2; }
+  if (has(/\b(war|weapon|bomb|attack|drone)\b/))                { s[4]-=2; }
+  for (var i = 0; i < 5; i++) { s[i] = Math.max(0, Math.min(15, Math.round(s[i]))); }
+  return s;
+}
+
+function getScores(phrase) {
+  var key = normalize(phrase);
+  if (REF[key]) {
+    return REF[key].map(function(v){ return Math.min(15, Math.max(0, v)); });
+  }
+  return heuristic(phrase);
+}
+
+// ── RADAR SVG ─────────────────────────────────────────────────────────────────
+
+function drawRadar(scores) {
+  var svg = document.getElementById("radar");
+  var cx = 178, cy = 170, R = 130, N = 5;
+  var labels = ["Structural\nMapping","Functional\nAlignment","Cognitive\nUtility","Contextual\nSensitivity","Ethical &\nInterp. Risk"];
+  var colors = DIMS.map(function(d){ return d.color; });
+  var rings  = [3, 6, 9, 12, 15];
+  var out    = "";
+
+  function axPt(i, frac) {
+    var a = (Math.PI * 2 / N) * i - Math.PI / 2;
+    return { x: cx + R * frac * Math.cos(a), y: cy + R * frac * Math.sin(a) };
+  }
+
+  // Grid rings
+  rings.forEach(function(lv) {
+    var pts = [];
+    for (var i = 0; i < N; i++) { var p = axPt(i, lv/15); pts.push(p.x.toFixed(1)+","+p.y.toFixed(1)); }
+    out += '<polygon points="'+pts.join(" ")+'" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>';
+  });
+
+  // Axes
+  for (var i = 0; i < N; i++) {
+    var tip = axPt(i, 1);
+    out += '<line x1="'+cx+'" y1="'+cy+'" x2="'+tip.x.toFixed(1)+'" y2="'+tip.y.toFixed(1)+'" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>';
+  }
+
+  // Data polygon
+  var dataPts = [];
+  for (var i = 0; i < N; i++) {
+    var p = axPt(i, scores[i]/15);
+    dataPts.push(p.x.toFixed(1)+","+p.y.toFixed(1));
+  }
+  out += '<polygon points="'+dataPts.join(" ")+'" fill="rgba(91,140,255,0.2)" stroke="#5b8cff" stroke-width="2.5"/>';
+
+  // Dots + score labels
+  for (var i = 0; i < N; i++) {
+    var dp = axPt(i, scores[i]/15);
+    var lp = axPt(i, scores[i]/15 + 0.14);
+    out += '<circle cx="'+dp.x.toFixed(1)+'" cy="'+dp.y.toFixed(1)+'" r="5" fill="'+colors[i]+'" stroke="#fff" stroke-width="1.5"/>';
+    out += '<text x="'+lp.x.toFixed(1)+'" y="'+(lp.y+4).toFixed(1)+'" fill="'+colors[i]+'" font-size="11" font-weight="700" font-family="Segoe UI,sans-serif" text-anchor="middle">'+scores[i]+'</text>';
+  }
+
+  // Axis labels
+  var labelOffsets = [1.32, 1.32, 1.30, 1.32, 1.32];
+  for (var i = 0; i < N; i++) {
+    var lp  = axPt(i, labelOffsets[i]);
+    var anc = lp.x < cx - 8 ? "end" : lp.x > cx + 8 ? "start" : "middle";
+    var lines = labels[i].split("\n");
+    var tspans = lines.map(function(ln, j){ return '<tspan x="'+lp.x.toFixed(1)+'" dy="'+(j===0?0:13)+'">'+ln+'</tspan>'; }).join("");
+    var yStart = (lp.y - (lines.length-1)*6).toFixed(1);
+    out += '<text x="'+lp.x.toFixed(1)+'" y="'+yStart+'" fill="#c8d0e7" font-size="10.5" font-weight="600" font-family="Segoe UI,sans-serif" text-anchor="'+anc+'">'+tspans+'</text>';
+  }
+
+  // Ring tick "15" label
+  var tick = axPt(0, 1);
+  out += '<text x="'+(tick.x+5).toFixed(1)+'" y="'+(tick.y).toFixed(1)+'" fill="#7c8db5" font-size="8.5" font-family="Segoe UI,sans-serif">15</text>';
+
+  svg.innerHTML = out;
+}
+
+// ── DIMENSIONS ────────────────────────────────────────────────────────────────
+
+function distSubs(total) {
+  var rem = total, subs = [0,0,0];
+  for (var i = 0; i < 3; i++) {
+    var maxA = Math.min(5, rem);
+    var minA = Math.max(0, rem - (2-i)*5);
+    var avg  = rem / (3-i);
+    var v    = Math.round(Math.min(maxA, Math.max(minA, avg + (Math.random()-0.5)*1.5)));
+    subs[i]  = v;
+    rem     -= v;
+  }
+  subs[2] = Math.max(0, Math.min(5, subs[2]+rem));
+  return subs;
+}
+
+function renderDims(scores) {
+  var html = "";
+  for (var i = 0; i < 5; i++) {
+    var dim  = DIMS[i];
+    var sc   = scores[i];
+    var pct  = (sc/15*100).toFixed(1);
+    var subs = distSubs(sc);
+    var subsHtml = "";
+    for (var j = 0; j < 3; j++) {
+      var dotsHtml = "";
+      for (var k = 1; k <= 5; k++) {
+        var fill = k<=subs[j] ? dim.color : "#2a3050";
+        dotsHtml += '<span class="dot" style="background:'+fill+'"></span>';
+      }
+      subsHtml += '<div class="subrow"><span class="subname">'+dim.subs[j]+'</span><span class="dots">'+dotsHtml+'</span></div>';
+    }
+    html += '<div class="drow">'
+          + '<div class="dhead"><span class="dname" style="color:'+dim.color+'">'+dim.name+'</span><span class="dchip">'+sc+'/15</span></div>'
+          + '<div class="barwrap"><div class="barfill" style="width:'+pct+'%;background:'+dim.color+'"></div></div>'
+          + '<div class="subs">'+subsHtml+'</div>'
+          + '</div>';
+  }
+  document.getElementById("dims").innerHTML = html;
+}
+
+// ── RATIONALE ─────────────────────────────────────────────────────────────────
+
+function buildRationale(phrase, scores, total) {
+  var op = total>=60
+    ? '"'+phrase+'" achieves <strong>high-fidelity</strong> status ('+total+'/75). It maintains strong isomorphic correspondence between source and target domains.'
+    : total>=40
+    ? '"'+phrase+'" registers as <strong>moderate validity</strong> ('+total+'/75). It offers genuine utility but contains structural or contextual limits that reduce reliability.'
+    : '"'+phrase+'" scores only '+total+'/75, qualifying as a <strong>mocking fad</strong> — superficially compelling but ontologically misleading as strategic doctrine.';
+
+  var str = scores[0]<6
+    ? '<strong>Structural Mapping ('+scores[0]+'/15):</strong> The analogy fails to preserve deep relational isomorphism. It prioritises surface salience over the logical architecture of the target domain, producing category errors in downstream reasoning.'
+    : scores[0]<11
+    ? '<strong>Structural Mapping ('+scores[0]+'/15):</strong> Partial structural correspondence exists, but the analogy loses fidelity at scale. Treat it as illustrative, not diagnostic.'
+    : '<strong>Structural Mapping ('+scores[0]+'/15):</strong> Strong relational isomorphism is preserved. Reliable for systematic reasoning and framework development.';
+
+  var eth = scores[4]<6
+    ? '<strong>Ethical & Interpretive Risk ('+scores[4]+'/15):</strong> Critical failure. Extractive or scarcity-driven framing provides linguistic cover for surveillance capitalism and normalises monopolistic behaviour. Harmful policy assumptions are easily embedded from this language.'
+    : scores[4]<11
+    ? '<strong>Ethical & Interpretive Risk ('+scores[4]+'/15):</strong> Moderate risk. The framing does not actively normalise harm but may quietly reinforce asymmetric power dynamics if unexamined.'
+    : '<strong>Ethical & Interpretive Risk ('+scores[4]+'/15):</strong> Low ethical risk. This framing does not normalise extractive, surveillance-driven, or biased logics.';
+
+  var cl = total>=60
+    ? 'This analogy holds the equilibrium between memorability and structural fidelity that defines enduring conceptual tools. It is safe and productive for strategic discourse.'
+    : total>=40
+    ? 'Use with explicit caveats about its structural limits. Pair with domain-specific language when precision is required.'
+    : 'Consider regenerative alternatives such as <em>Data as Soil</em> or <em>Data as Light</em> — framings that reflect the non-rivalrous, regenerative reality of the domain and score substantially higher on structural and ethical dimensions.';
+
+  return '<p>'+op+'</p><p>'+str+'</p><p>'+eth+'</p><p><strong>Overall verdict:</strong> '+cl+'</p>';
+}
+
+// ── MAIN EVAL ─────────────────────────────────────────────────────────────────
+
+
+function isMeaningless(phrase) {
+  var p = phrase.toLowerCase().trim();
+
+  // Pattern: single char or digit placeholders e.g. "1 is the new 2", "A is the new B"
+  if (/^[a-z0-9]{1,2}\s+is\s+the\s+new\s+[a-z0-9]{1,2}$/.test(p)) return true;
+
+  // Strip filler/connector words to isolate content words
+  var fillers = /\b(is|the|new|a|an|of|like|as|are|was|be|for|in|on|at|to|and|or|my|your|our|their|this|that|it|its|very|just|so|not|no|than)\b/g;
+  var stripped = p.replace(fillers, " ").replace(/[^a-z\s]/g, "").replace(/\s+/g, " ").trim();
+  var words = stripped.split(" ").filter(function(w){ return w.length > 1; });
+
+  // Fewer than 2 content words = placeholder
+  if (words.length < 2) return true;
+
+  // All words are single chars or pure numbers
+  var hasRealWord = words.some(function(w){ return w.length > 2 && !/^[0-9]+$/.test(w); });
+  if (!hasRealWord) return true;
+
+  // Whitelist: domain-signal words that indicate a genuine analogy
+  // (science, tech, nature, economics, philosophy, culture, process, etc.)
+  var domainSignals = [
+    "data","oil","code","dna","gene","algorithm","network","platform","cloud","software",
+    "hardware","internet","blockchain","bitcoin","crypto","electricity","fire","water","light",
+    "earth","soil","seed","forest","ecosystem","ocean","river","storm","sun","moon","star",
+    "brain","neuron","mind","heart","body","cell","atom","quantum","molecule","protein",
+    "market","economy","capital","money","gold","resource","energy","fuel","power","engine",
+    "road","highway","bridge","pipeline","cable","rail","grid","city","nation","state",
+    "war","weapon","army","battle","revolution","democracy","freedom","justice","law","policy",
+    "journey","river","mountain","sea","voyage","map","compass","anchor","wheel","rudder",
+    "machine","robot","computer","tool","instrument","lens","mirror","filter","clock","scale",
+    "language","book","library","story","narrative","metaphor","symbol","signal","noise",
+    "art","music","painting","theatre","stage","canvas","colour","rhythm","harmony",
+    "game","chess","sport","race","team","player","coach","strategy","tactics","score",
+    "food","seed","harvest","soil","rain","drought","crop","field","farm","garden",
+    "medicine","virus","vaccine","immune","disease","cure","doctor","hospital","surgery",
+    "teacher","student","school","curriculum","knowledge","skill","learning","education",
+    "time","space","gravity","force","wave","particle","light","dark","chaos","order",
+    "love","hate","fear","hope","trust","faith","doubt","grief","joy","anger","desire",
+    "work","labour","factory","production","supply","demand","trade","exchange","value",
+    "uber","amazon","google","facebook","netflix","apple","tesla","spacex","microsoft"
+  ];
+
+  var hasDomainWord = words.some(function(w){
+    for (var i = 0; i < domainSignals.length; i++) {
+      if (w === domainSignals[i] || w.indexOf(domainSignals[i]) === 0 || domainSignals[i].indexOf(w) === 0 && w.length >= 4) {
+        return true;
+      }
+    }
+    return false;
+  });
+
+  // Also flag pure demographic/generic noun swaps with no conceptual domain
+  // e.g. "girl is the new boy", "cat is the new dog", "monday is the new friday"
+  var genericNouns = [
+    "boy","girl","man","woman","male","female","cat","dog","bird","fish","cow","horse",
+    "red","blue","green","black","white","pink","yellow","purple","orange","grey","gray",
+    "monday","tuesday","wednesday","thursday","friday","saturday","sunday",
+    "january","february","march","april","june","july","august","september","october","november","december",
+    "one","two","three","four","five","six","seven","eight","nine","ten",
+    "alpha","beta","gamma","delta","sigma","omega","x","y","z",
+    "thing","stuff","item","object","entity","unit","element","part","piece","bit",
+    "person","people","human","individual","someone","anyone","everyone","nobody"
+  ];
+
+  var allGeneric = words.every(function(w){
+    for (var i = 0; i < genericNouns.length; i++) {
+      if (w === genericNouns[i]) return true;
+    }
+    return false;
+  });
+
+  if (allGeneric) return true;
+  if (!hasDomainWord && words.length <= 3) return true;
+
+  return false;
+}
+
+function runEval() {
+  var phrase = document.getElementById("inp").value.trim();
+  if (!phrase) { document.getElementById("inp").focus(); return; }
+
+  var scores = getScores(phrase);
+  var total  = scores.reduce(function(a,b){ return a+b; }, 0);
+
+
+  // Meaningless phrase detection
+  var warnBox = document.getElementById("warnBox");
+  var warnScore = document.getElementById("warnScore");
+  if (isMeaningless(phrase)) {
+    warnBox.style.display = "block";
+    warnScore.textContent = total;
+  } else {
+    warnBox.style.display = "none";
+  }
+
+  // Banner
+  document.getElementById("ptitle").textContent = '"' + phrase + '"';
+  var bsc = document.getElementById("bscore");
+  var pil = document.getElementById("pill");
+  bsc.textContent = total;
+  if (total >= 60) {
+    bsc.style.color = "#34d399";
+    pil.textContent = "High Fidelity";
+    pil.className   = "pill p-high";
+  } else if (total >= 40) {
+    bsc.style.color = "#fbbf24";
+    pil.textContent = "Moderate Validity";
+    pil.className   = "pill p-mod";
+  } else {
+    bsc.style.color = "#f87171";
+    pil.textContent = "Mocking Fad — Conceptual Distortion";
+    pil.className   = "pill p-low";
+  }
+  document.getElementById("banner").style.display = "block";
+
+  // Grid
+  drawRadar(scores);
+  renderDims(scores);
+  document.getElementById("rationale").innerHTML = buildRationale(phrase, scores, total);
+  document.getElementById("grid").style.display = "grid";
+
+  document.getElementById("banner").scrollIntoView({ behavior:"smooth" });
+}
+
+// ── EXAMPLE CHIPS ─────────────────────────────────────────────────────────────
+
+(function() {
+  var container = document.getElementById("chips");
+  for (var i = 0; i < EXAMPLES.length; i++) {
+    var chip = document.createElement("span");
+    chip.className   = "chip";
+    chip.textContent = EXAMPLES[i];
+    chip.setAttribute("data-val", EXAMPLES[i]);
+    chip.onclick = function() {
+      document.getElementById("inp").value = this.getAttribute("data-val");
+      runEval();
+    };
+    container.appendChild(chip);
+  }
+})();
+
+// Enter key
+document.getElementById("inp").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") { runEval(); }
+});
+
+</script>
+</body>
+</html>
